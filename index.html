@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Float Practice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .leftfix {
+        float: left;
+      }
+      .rightfix {
+        float: right;
+      }
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .container {
+        margin: 0 auto;
+        width: 960px;
+        text-align: center;
+      }
+      .logo,
+      .banner1,
+      .banner2 {
+        background-color: #ccc;
+        height: 80px;
+        line-height: 80px;
+      }
+      .logo {
+        width: 200px;
+      }
+      .banner1 {
+        width: 540px;
+        margin: 0 10px;
+      }
+      .banner2 {
+        width: 200px;
+      }
+      .menu {
+        background-color: #ccc;
+        height: 30px;
+        margin-top: 10px;
+        line-height: 30px;
+      }
+      .item1,
+      .item2 {
+        width: 368px;
+        height: 198px;
+        border: 1px solid black;
+        line-height: 198px;
+        margin-right: 10px;
+      }
+      .content {
+        margin-top: 10px;
+      }
+      .item3,
+      .item4,
+      .item5,
+      .item6 {
+        width: 178px;
+        height: 198px;
+        border: 1px solid black;
+        line-height: 198px;
+        margin-top: 10px;
+        margin-right: 10px;
+      }
+      .item7,
+      .item8,
+      .item9 {
+        width: 198px;
+        height: 128px;
+        border: 1px solid black;
+        line-height: 128px;
+      }
+      .item8 {
+        margin: 10px 0;
+      }
+      .footer {
+        background-color: #ccc;
+        height: 60px;
+        margin-top: 10px;
+        line-height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <div class="page-header clearfix">
+        <div class="box logo leftfix">logo</div>
+        <div class="box banner1 leftfix">banner1</div>
+        <div class="box banner2 leftfix">banner2</div>
+      </div>
+      <!-- Menu -->
+      <div class="menu">Menu</div>
+      <!-- Content -->
+      <div class="content clearfix">
+        <div class="left leftfix">
+          <!-- Top -->
+          <div class="top clearfix">
+            <div class="item1 leftfix">Item 1</div>
+            <div class="item2 leftfix">Item 2</div>
+          </div>
+          <!-- Bottom -->
+          <div class="bottom">
+            <div class="item3 leftfix">Item 3</div>
+            <div class="item4 leftfix">Item 4</div>
+            <div class="item5 leftfix">Item 5</div>
+            <div class="item6 leftfix">Item 6</div>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="right rightfix">
+          <div class="item7">Item 7</div>
+          <div class="item8">Item 8</div>
+          <div class="item9">Item 9</div>
+        </div>
+      </div>
+      <!-- Footer -->
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>
